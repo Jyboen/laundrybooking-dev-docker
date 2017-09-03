@@ -10,7 +10,7 @@ I created this project to help me setup a one-click development environment for 
 This is just too easy:
 
 * Clone this repo.
-* Open the file "start" and fill in the environment variables (comments in the file).
+* Open the file "start" in an editor and fill in the environment variables (comments in the file).
 * Run ./start
 * Open a web browser and go to http://localhost:8000
 
