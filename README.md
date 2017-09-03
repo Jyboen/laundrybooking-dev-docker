@@ -5,7 +5,7 @@ The laundrybooking project can be found here: https://github.com/chrillux/laundr
 
 I created this project to help me setup a one-click development environment for the laundrybooking app. It's also pretty neat for anyone who just wants to try the laundrybooking app on their own computer. The only thing needed is docker and git and you'll be up and running within a minute.
 
-## Installing laundrybooking-dev-docker
+## Installation
 
 This is just too easy:
 
