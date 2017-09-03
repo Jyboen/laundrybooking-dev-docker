@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  web:
+    environment:
+      - SITE_NAME
+      - SITE_DOMAIN
+      - CLIENT_ID
+      - SECRET
+      - CALENDAR_NAME
+      - CALENDAR_SLUG
+      - DATABASE_URL
+    build: .
+    command: [ "/tools/wait-for-postgres", "db", "python", "manage.py", "runserver", "0.0.0.0:8000" ]
+    volumes:
+      - ./laundrybooking:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

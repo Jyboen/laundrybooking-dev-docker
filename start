@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Choose your calendar name and slug, e.g laundrybooking-dev.
+export CALENDAR_NAME=""
+export CALENDAR_SLUG=""
+
+# No need to change this. Uses "dj_database_url"
+# (https://github.com/kennethreitz/dj-database-url) to parse and setup the
+# database.
+export DATABASE_URL="postgres://postgres@db:5432/postgres"
+
+# Choose your site name, e.g laundrybooking-dev.
+export SITE_NAME=""
+export SITE_DOMAIN="localhost:8000"
+
+# Put your facebook app ID here, if you want to use facebook login. If you
+# don't want to use facebook login, just put anything here.
+export CLIENT_ID=""
+
+# Put your facebook app secret here, if you want to use facebook login.
+export SECRET=""
+
+LAUNDRYBOOKING_DIR="laundrybooking"
+LAUNDRYBOOKING_GITHUB_REPO="https://github.com/chrillux/laundrybooking"
+if [ ! -d "${LAUNDRYBOOKING_DIR}/.git" ]; then
+    git clone "${LAUNDRYBOOKING_GITHUB_REPO}"
+fi
+
+docker-compose run web /tools/wait-for-postgres db python manage.py migrate
+docker-compose up
