@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Choose your calendar name and slug, e.g laundrybooking-dev.
-export CALENDAR_NAME=""
-export CALENDAR_SLUG=""
+export CALENDAR_NAME="laundrybooking-dev"
+export CALENDAR_SLUG="laundrybooking-dev"
 
 # No need to change this. Uses "dj_database_url"
 # (https://github.com/kennethreitz/dj-database-url) to parse and setup the
@@ -10,15 +10,15 @@ export CALENDAR_SLUG=""
 export DATABASE_URL="postgres://postgres@db:5432/postgres"
 
 # Choose your site name, e.g laundrybooking-dev.
-export SITE_NAME=""
+export SITE_NAME="laundrybooking-dev"
 export SITE_DOMAIN="localhost:8000"
 
 # Put your facebook app ID here, if you want to use facebook login. If you
 # don't want to use facebook login, just put anything here.
-export CLIENT_ID=""
+export CLIENT_ID="foo"
 
 # Put your facebook app secret here, if you want to use facebook login.
-export SECRET=""
+export SECRET="bar"
 
 LAUNDRYBOOKING_DIR="laundrybooking"
 LAUNDRYBOOKING_GITHUB_REPO="https://github.com/chrillux/laundrybooking"
