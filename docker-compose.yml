@@ -14,6 +14,7 @@ services:
       - CALENDAR_NAME
       - CALENDAR_SLUG
       - DATABASE_URL
+      - RUN_DEV_ENVIRONMENT
     build: .
     command: [ "/tools/wait-for-postgres", "db", "python", "manage.py", "runserver", "0.0.0.0:8000" ]
     volumes:

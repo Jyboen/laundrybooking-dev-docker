@@ -9,6 +9,9 @@ export CALENDAR_SLUG="laundrybooking-dev"
 # database.
 export DATABASE_URL="postgres://postgres@db:5432/postgres"
 
+# Don't redirect traffic from http to https on localhost
+export RUN_DEV_ENVIRONMENT=1
+
 # Choose your site name, e.g laundrybooking-dev.
 export SITE_NAME="laundrybooking-dev"
 export SITE_DOMAIN="localhost:8000"
